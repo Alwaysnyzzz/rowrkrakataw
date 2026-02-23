@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Overload-X - Buat Server Pterodactyl</title>
+
+  <!-- Google Font & Icon -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="particles"></div>
+
+  <header>
+    <div class="logo-container">
+      <!-- Ganti dengan logo Anda atau gunakan default -->
+      <img src="https://files.catbox.moe/0mg829.jpg" alt="Logo" class="logo">
+    </div>
+    <h1 class="hero-title">Overload-X</h1>
+    <div class="nav-container">
+      <a href="#register" class="nav-link">Register</a>
+      <a href="#plans" class="nav-link">Plans</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="section hero">
+      <div class="hero-subtitle">Buat akun dan server Pterodactyl instan dengan sekali klik.</div>
+      <a href="#register" class="btn">
+        <i class="fas fa-rocket"></i> Mulai Sekarang
+      </a>
+    </section>
+
+    <!-- Panel Registrasi (Utama) -->
+    <section id="register" class="section">
+      <h2 class="section-title">➕ Daftar & Buat Server</h2>
+      <div style="max-width: 500px; margin: 0 auto;">
+        <form id="registerForm">
+          <div class="form-group">
+            <label for="package">Pilih Paket RAM</label>
+            <select id="package" class="form-control" required>
+              <option value="">-- Pilih Paket --</option>
+              <option value="1">1GB</option>
+              <option value="2">2GB</option>
+              <option value="3">3GB</option>
+              <option value="4">4GB</option>
+              <option value="6">6GB</option>
+              <option value="8">8GB</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email (akan jadi username)</label>
+            <input type="email" id="email" class="form-control" placeholder="user@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" class="form-control" placeholder="Minimal 8 karakter" required>
+          </div>
+
+          <div class="form-group">
+            <label for="serverName">Nama Server (opsional)</label>
+            <input type="text" id="serverName" class="form-control" placeholder="Kosongkan untuk nama default">
+          </div>
+
+          <button type="submit" class="btn" style="width: 100%;">
+            <i class="fas fa-server"></i> Buat Akun & Server
+          </button>
+        </form>
+        <div id="result" style="margin-top: 20px;"></div>
+      </div>
+    </section>
+
+    <!-- Plans Section (sama seperti template) -->
+    <section id="plans" class="section">
+      <h2 class="section-title">Membership Plans</h2>
+      <div class="plans-container">
+        <div class="plan-card">
+          <h3 class="plan-name">Basic User</h3>
+          <div class="plan-price">Rp 25.000 <span>/Lifetime</span></div>
+          <ul class="plan-features">
+            <li><i class="fas fa-check feature-icon"></i> Limited Requests Day</li>
+            <li><i class="fas fa-check feature-icon"></i> Standard Support</li>
+            <li><i class="fas fa-check feature-icon"></i> Web Panel Access</li>
+          </ul>
+          <a href="https://t.me/SyallOfficial?text=Mas%20Mau%20Buy%20Basic%20User" class="btn btn-outline">Select Plan</a>
+        </div>
+        <div class="plan-card">
+          <h3 class="plan-name">Reseller User</h3>
+          <div class="plan-price">Rp 60.000 <span>/Lifetime</span></div>
+          <ul class="plan-features">
+            <li><i class="fas fa-check feature-icon"></i> Increased Request Limits</li>
+            <li><i class="fas fa-check feature-icon"></i> Priority Support</li>
+            <li><i class="fas fa-check feature-icon"></i> Web Panel Access</li>
+            <li><i class="fas fa-check feature-icon"></i> Create Basic User</li>
+          </ul>
+          <a href="https://t.me/SyallOfficial?text=Mas%20Mau%20Buy%20Reseller%20User" class="btn btn-outline">Select Plan</a>
+        </div>
+        <div class="plan-card">
+          <h3 class="plan-name">Admin User</h3>
+          <div class="plan-price">Rp 100.000 <span>/Lifetime</span></div>
+          <ul class="plan-features">
+            <li><i class="fas fa-check feature-icon"></i> Unlimited Request Limits</li>
+            <li><i class="fas fa-check feature-icon"></i> 24/7 Priority Support</li>
+            <li><i class="fas fa-check feature-icon"></i> Web Panel Access</li>
+            <li><i class="fas fa-check feature-icon"></i> Role Management System</li>
+          </ul>
+          <a href="https://t.me/SyallOfficial?text=Mas%20Buy%20Admin%20User" class="btn btn-outline">Select Plan</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <h2 class="section-title">About Overload-X</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>Overload-X is a sophisticated website for managing and exploring bugs in API systems. Built with the latest technology.</p>
+          <p>Our website is designed for users of Exploit to WhatsApp Application.</p>
+        </div>
+        <div>
+          <ul class="about-features">
+            <li><i class="fas fa-bug"></i> Advanced Bug Detection Algorithms</li>
+            <li><i class="fas fa-shield-alt"></i> Real-time Vulnerability Scanning</li>
+            <li><i class="fas fa-bolt"></i> High-performance API</li>
+            <li><i class="fas fa-code"></i> Support for Multiple Programming Languages</li>
+            <li><i class="fas fa-mobile-alt"></i> Responsive Design for all Devices</li>
+            <li><i class="fas fa-cloud"></i> Cloud-based Infrastructure</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <h2 class="section-title">Contact Owner</h2>
+      <div class="contact-container">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fab fa-telegram"></i>
+            </div>
+            <div>
+              <h3>Telegram</h3>
+              <p>@SyallOfficial</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div>
+              <h3>Email</h3>
+              <p>irsyalfaiz97@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div>
+              <h3>Response Time</h3>
+              <p>Within 24 hours</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Contact Form -->
+        <form class="contact-form" action="https://submit-form.com/L1CukDuye" method="POST">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" class="form-control" placeholder="Type your message here" required></textarea>
+          </div>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p class="footer-text">© 2025 Overload-X. All rights reserved.</p>
+  </footer>
+
+  <!-- Particles dan Script -->
+  <script src="https://cdn.jsdelivr.net/gh/jnicol/particleground/jquery.particleground.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+  <script>
+    // Inisialisasi partikel
+    document.addEventListener('DOMContentLoaded', function () {
+      particleground(document.getElementById('particles'), {
+        dotColor: '#b19cd9',
+        lineColor: '#8a2be2',
+        minSpeedX: 0.1,
+        maxSpeedX: 0.3,
+        minSpeedY: 0.1,
+        maxSpeedY: 0.3,
+        density: 10000,
+        particleRadius: 3,
+      });
+      
+      // Smooth scrolling
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
